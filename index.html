@@ -21,6 +21,70 @@
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
 
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.slider{
+  max-width: 1100px;
+  display: flex;
+}
+.slider .card{
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
+}
+.slider .card .img{
+  height: 200px;
+  width: 100%;
+}
+.slider .card .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slider .card .content{
+  padding: 10px 20px;
+}
+.card .content .title{
+  font-size: 25px;
+  font-weight: 600;
+}
+.card .content .sub-title{
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+}
+.card .content p{
+  text-align: justify;
+  margin: 10px 0;
+}
+.card .content .btn{
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+}
+.card .content .btn button{
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card .content .btn button:hover{
+  transform: scale(0.9);
+}
+  </style>
+
 </head>
 
 <body>
@@ -128,32 +192,33 @@
     </div>
   </section>
 
-
-  <!-- Image Showcases -->
+  <!--  -->
   <section class="showcase">
     <div class="container-fluid mx-auto p-5">
-
-      <div class="card">
+    <div class="row">
+      <div class="col-lg-8">
+                    <div class="card">
             <div class="card-header">
               <h1> Decifrador de intereses </h1>
             </div>
       <div class="card-body">
          <form>
+           <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Nombre">
+        </div>
+      </div>
       <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
           <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
         </div>
       </div>
-      <div class="form-group row">
-        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-        </div>
-      </div>
+
       <fieldset class="form-group">
         <div class="row">
-          <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+          <legend class="col-form-label col-sm-2 pt-0">Géneros favoritos</legend>
           <div class="col-sm-10">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -189,16 +254,73 @@
       </div>
       <div class="form-group row">
         <div class="col-sm-10">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-primary">Averiguar</button>
         </div>
       </div>
     </form>
       </div>
     </div>
 
+      </div>
+
+    </div>
+
 
     </div>
   </section>
+
+  <section class="showcase">
+    <div class="container">
+      <div class="slider owl-carousel">
+        <div class="card">
+          <div class="img">
+            <img src="img/01.jpg" alt=""></div>
+          <div class="content">
+                <div class="title">
+      El Principito</div>
+      <div class="sub-title">
+      Graphic Designer</div>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
+      <div class="btn">
+                  <button>Más info</button>
+                </div>
+      </div>
+      </div>
+        <div class="card">
+                <div class="img">
+            <img src="img/02.jpg" alt=""></div>
+        <div class="content">
+                  <div class="title">
+        Pricilla Preez</div>
+        <div class="sub-title">
+        Web Developer</div>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
+        <div class="btn">
+                    <button>Más info</button>
+                  </div>
+        </div>
+        </div>
+        <div class="card">
+                <div class="img">
+            <img src="img/03.jpg" alt=""></div>
+        <div class="content">
+                  <div class="title">
+        Eliana Maia</div>
+        <div class="sub-title">
+        App Developer</div>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
+        <div class="btn">
+                    <button>Más info</button>
+                  </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Footer -->
   <footer class="footer bg-light">
@@ -250,6 +372,15 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+      $(".slider").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000, //2000ms = 2s;
+        autoplayHoverPause: true,
+      });
+    </script>
 
 </body>
 
